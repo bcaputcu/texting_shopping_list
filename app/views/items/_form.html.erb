@@ -1,0 +1,10 @@
+<%= simple_form_for(@item, :html => { :class => 'form-horizontal' }) do |f| %>
+<%= f.input :name %>
+<%= f.input :done %>
+<div class="control-group">
+	<div class="controls">
+		<%= f.button :submit, :class => 'btn-primary' %>
+	</div>
+</div>
+<% end %>
+
