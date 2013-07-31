@@ -17,7 +17,7 @@ class SmsController < ApplicationController
 			item = Item.create(name: message_body)
 
 			if item.valid?
-				to_send = "#{item.name} added. Current list: #{current_list_string}".truncate(160)
+				to_send = "#{item.name} added. Current list: #{current_list_string}, #{item.name}".truncate(160)
 			else
 				to_send = "Error! Report to Berk Caputcu!"
 			end
