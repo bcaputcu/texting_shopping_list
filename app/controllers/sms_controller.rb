@@ -1,4 +1,7 @@
 class SmsController < ApplicationController
+
+	skip_before_filter :verify_authenticity_token, except: [:create]
+
 	def create
 		message_body = params["Body"]
 		from_number = params["From"]
@@ -11,7 +14,8 @@ class SmsController < ApplicationController
 			item = Item.create(name: message_body)
 
 			if item.valid?
-				to_send = "#{item.name} added. Current list: #{current_list_string}".truncate(160)
+				to_send = "#{item.name} added. Current list: #{current_list_string}"
+				to_send =  truncate to_send, length: 160, omission: '...'
 			else
 				to_send = "Error! Report to Berk Caputcu!"
 			end
