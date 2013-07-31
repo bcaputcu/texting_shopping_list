@@ -6,7 +6,10 @@ class SmsController < ApplicationController
 		message_body = params["Body"]
 		from_number = params["From"]
 
-		current_list_string = Item.current_list.join(',')
+		current_list_names = []
+		Item.current_list.each {|item| current_list_names.push item.name}
+
+		current_list_string = current_list_names.join(',')
 
 		if message_body.casecmp('list') == 0
 			to_send = current_list_string
