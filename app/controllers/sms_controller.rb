@@ -5,7 +5,7 @@ class SmsController < ApplicationController
 
 		current_list_string = Item.current_list.join(',')
 
-		if message_body == 'list'
+		if message_body.casecmp('list') == 0
 			to_send = current_list_string
 		else
 			item = Item.create(name: message_body)
