@@ -1,15 +1,8 @@
-<h1>List</h1>
-
-<div class="row">
-	<div class="span2">
-		<%= link_to "Add new item", new_item_path, class: "btn btn-success" %>
-	</div>
-</div>
-
-<br>
 
 <div class="row">
 	<div class="span4">
+		<h3>List <%= link_to "Add new item", new_item_path, class: "btn btn-success pull-right" %></h3>
+		
 		<table class="table table-bordered">
 			<thead>				
 				<tr>
@@ -19,7 +12,28 @@
 				</tr>
 			</thead>
 			<tbody>
-				<% @items.each_with_index do |item, index| %>
+				<% @current_list.each_with_index do |item, index| %>
+				<tr>
+					<td><%= index+1 %></td>
+					<td><%= item.name %></td>
+					<td><%= render partial: 'checkbox_form', locals: {item: item} %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+	<div class="span4 offset2">
+		<h3>Already bought</h3>
+		<table class="table table-bordered">
+			<thead>				
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Done</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @bought.each_with_index do |item, index| %>
 				<tr>
 					<td><%= index+1 %></td>
 					<td><%= item.name %></td>

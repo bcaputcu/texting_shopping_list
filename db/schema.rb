@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(:version => 20130730194457) do
 
   create_table "items", :force => true do |t|
-    t.boolean  "done"
+    t.boolean  "done",       :default => false
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
 end

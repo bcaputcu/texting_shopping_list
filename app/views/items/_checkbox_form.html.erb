@@ -1,0 +1,3 @@
+<%= form_for(item, remote: true) do |f| %>
+<%= f.check_box :done, onclick: "this.form.submit();" %>
+<% end %>
