@@ -1,23 +1,23 @@
 == Messaging Shopping List
 
-+ Get a Twilio account
-+ Plug these in => ENV['twilio_sid'], ENV['twilio_token'], ENV['twilio_phone_number']
-+ You have a smart shopping list on the cloud!
+- Get a Twilio account
+- Plug these in => ENV['twilio_sid'], ENV['twilio_token'], ENV['twilio_phone_number']
+- You have a smart shopping list on the cloud!
 
 == Instructions
 
-+ Save the Twilio phone number to your contact list
-+	Text 'list' for the shopping list
-+ Text anything else to add to the shopping list
-+ After you do the groceries, go on the site to check them off the list.
-+ You can also add to the list from the web interface.
+- Save the Twilio phone number to your contact list
+-	Text 'list' for the shopping list
+- Text anything else to add to the shopping list
+- After you do the groceries, go on the site to check them off the list.
+- You can also add to the list from the web interface.
 
 == TODO
 
-+ Add a command to remove a specific item/all items/multiple items by phone
-+ Authorization
-+ Better way to list the bought items.
-+ Statistics page for the items added to the list and bought
-+ Statistics page to display number of text messages received/sent
-+ Add quantity field for more details
-+ A way to show if the item is added by texting or from the website
+- Add a command to remove a specific item/all items/multiple items by phone
+- Authorization
+- Better way to list the bought items.
+- Statistics page for the items added to the list and bought
+- Statistics page to display number of text messages received/sent
+- Add quantity field for more details
+- A way to show if the item is added by texting or from the website
