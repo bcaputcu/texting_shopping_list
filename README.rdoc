@@ -7,7 +7,7 @@
 == Instructions
 
 - Save the Twilio phone number to your contact list
--	Text 'list' for the shopping list
+- Text 'list' for the shopping list
 - Text anything else to add to the shopping list
 - After you do the groceries, go on the site to check them off the list.
 - You can also add to the list from the web interface.
